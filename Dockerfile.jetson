@@ -147,7 +147,7 @@ ENV MODEL_ROOT=${MODEL_ROOT} \
     GRADIO_SERVER_NAME=0.0.0.0 \
     ACESTEP_INIT_SERVICE=true \
     ACESTEP_LLM_BACKEND=vllm \
-    ACESTEP_CONFIG_PATH=${MODEL_ROOT}/acestep-v15-turbo \
+    ACESTEP_CONFIG_PATH=acestep-v15-turbo \
     ACESTEP_LM_MODEL_PATH=${MODEL_ROOT}/acestep-5Hz-lm-4B
 
 RUN mkdir -p ${MODEL_ROOT} /app/gradio_outputs
