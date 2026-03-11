@@ -136,10 +136,10 @@ RUN if [ -d /app/acestep/third_parts/nano-vllm ]; then \
 # -------------------- Model layout --------------------
 ARG MODEL_ROOT=/models
 ARG MODEL_SOURCE=none
-ARG MAIN_MODEL_URL=
-ARG BASE_MODEL_URL=
-ARG LM_MODEL_URL=
-ARG TURBO_MODEL_URL=
+ARG MAIN_MODEL_URL=none
+ARG BASE_MODEL_URL=http://98.82.28.3/tmp/acestep-v15-base.tar.gz
+ARG LM_MODEL_URL=http://98.82.28.3/tmp/acestep-5Hz-lm-4B.tar.gz
+ARG TURBO_MODEL_URL=http://98.82.28.3/tmp/acestep-v15-turbo.tar.gz
 
 ENV MODEL_ROOT=${MODEL_ROOT} \
     ACESTEP_MODE=api \
