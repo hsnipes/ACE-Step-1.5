@@ -129,6 +129,8 @@ RUN pip install --no-cache-dir \
     pyyaml \
     "bitsandbytes>=0.43.0"
 
+
+
 RUN if [ -d /app/acestep/third_parts/nano-vllm ]; then \
       pip install --no-cache-dir --no-deps /app/acestep/third_parts/nano-vllm; \
     fi
@@ -151,6 +153,9 @@ ENV MODEL_ROOT=${MODEL_ROOT} \
     ACESTEP_LM_MODEL_PATH=${MODEL_ROOT}/acestep-5Hz-lm-4B
 
 RUN mkdir -p ${MODEL_ROOT} /app/gradio_outputs
+
+RUN pip install --no-cache-dir runpod requests
+CMD ["python", "-u", "handler.py"]
 
 RUN set -eux; \
     if [ "${MODEL_SOURCE}" = "url" ]; then \
